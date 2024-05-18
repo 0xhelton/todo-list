@@ -21,7 +21,7 @@ public class UserController {
         var user = this.userRepository.findByUsername(userModel.getUsername());
 
         if (user != null) {
-            System.out.println("User already exists");
+            System.out.println("Usuário já existe");
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("User already exists");
         }
 

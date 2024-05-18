@@ -53,7 +53,7 @@ public class TaskController {
 
         var idUser = request.getAttribute("idUser");
 
-        if (task.getIdUser().equals(idUser)) {
+        if (!task.getIdUser().equals(idUser)) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Usuário não tem permissão para alterar essa tarefa");
         }
 
